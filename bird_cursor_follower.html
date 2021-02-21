@@ -2,11 +2,12 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Bird cursor with blend mode</title>
+  <title>CodePen - cursor-embed-test</title>
   
 
 </head>
 <body>
+<!-- partial:index.partial.html -->
 <!-- partial:index.partial.html -->
 <style>
   body {
@@ -192,11 +193,10 @@ body .right {
 
   </div>
 </div>
-	
+
 <!-- partial -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
-<script>
-	const $bigBall = document.querySelector('.cursor__ball--big');
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+<script> const $bigBall = document.querySelector('.cursor__ball--big');
 const $smallBall = document.querySelector('.cursor__ball--small');
 const $hoverables = document.querySelectorAll('.hoverable');
 
@@ -231,6 +231,7 @@ function onMouseHoverOut() {
 
 }
 </script>
-
+<!-- partial -->
+  
 </body>
 </html>
