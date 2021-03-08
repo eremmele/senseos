@@ -7,8 +7,7 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<style>
-body {
+<style>body {
   width: 100%;
   min-height: 100%;
   margin: 0;
@@ -118,7 +117,7 @@ canvas {
           animation: anim 1000s linear infinite forwards;
 }
 </style>
-<canvas id="canv2"></canvas>
+<canvas id="canva"></canvas>
  <div class="sky">
   <div class="clouds">
     <div class="c1 one"></div>
@@ -653,9 +652,9 @@ Bird.Matrix = {
 }
 
 function draw() {
-  var c = document.getElementById('canv2');
+  var c = document.getElementById('canva');
   Bird.$ = c.getContext("2d");
-  Bird.canv2 = {
+  Bird.canva = {
     w: c.width = window.innerWidth,
     h: c.height = window.innerHeight
   };
@@ -687,8 +686,8 @@ function draw() {
 
   function draw() {
     Bird.$.setTransform(1, 0, 0, 1, 0, 0);
-    Bird.$.translate(Bird.canv2.w / 2, Bird.canv2.h / 2);
-    Bird.$.clearRect(-Bird.canv2.w / 2, -Bird.canv2.h / 2, Bird.canv2.w, Bird.canv2.h);
+    Bird.$.translate(Bird.canva.w / 2, Bird.canva.h / 2);
+    Bird.$.clearRect(-Bird.canva.w / 2, -Bird.canva.h / 2, Bird.canva.w, Bird.canva.h);
     Bird.$.scale(1, -1);
     var arr = [];
     b.forEach(function(e, i, a) {
@@ -716,7 +715,7 @@ function draw() {
 draw();
 window.addEventListener('resize',function(){
    if(c.width!==window.innerWidth && c.height!==window.innerHeight){
-     Bird.canv2 = {
+     Bird.canva = {
       w: c.width = window.innerWidth,
       h: c.height = window.innerHeight
     };
